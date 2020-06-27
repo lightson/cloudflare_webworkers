@@ -9,15 +9,16 @@ addEventListener('fetch', event => {
 
 async function makeWebp(request) {
 
-    let regex = /\.jpg$|\.png$/
+    let regex = /\.jpg$/
 
     if(request.headers.get('Accept')
         && request.headers.get('Accept').match(/image\/webp/)
         && request.url.match(regex)) {
         /**
          * Replace jpg / png with webp
+         * very minor change from original, since my extensions are .jpg.webp and not just .webp
          */
-        let url = new URL(request.url.replace(regex, '.webp'))
+        let url = new URL(request.url.replace(regex, '.jpg.webp'))
 
         /**
          * Create a new request with the webp url
