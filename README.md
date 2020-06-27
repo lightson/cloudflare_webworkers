@@ -4,13 +4,9 @@ Collection of examples and tools for CloudFlare WebWorkers (CFWW)
 
 Ref: https://blog.cloudflare.com/introducing-cloudflare-workers/
 
-## Getting Started
-
-CFWW is in beta, request access through the method described at the CloudFlare website.
-
 ### Prerequisites
 
-A CloudFlare account with WebWorkers enabled is assumed to be available
+A CloudFlare account with WebWorkers enabled is assumed to be available along with Litespeed Cache Running on Wordpress
 
 ### Installing
 
@@ -18,7 +14,7 @@ Copy paste the script and enable it for the applicable routes.
 
 ## Running the tests
 
-No tests currently available
+To verify that everything is working as it should, right-click a random image and open it in a new tab while inspecting the Network in your browser. You should see that while the image still has .jpg or .png as it’s extension but the content-type is image/webp:
 
 
 ### Coding style tests
@@ -31,15 +27,14 @@ Copy paste the script and enable it for the applicable routes.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/vidaxl-com/cloudflare_webworkers/tags). 
 
 ## Authors
 
 * **Zeger Knops** - *Initial work* - [vidaXL](https://github.com/zeger-vdxl) / [personal](https://github.com/zegerk)
+* **Lightson** very minor tweak for litespeed cache.
 
 ## License
 
